@@ -52,7 +52,7 @@ export default function Career() {
   return (
     <section className="py-16 px-4 bg-[#0d1126] text-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center text-emerald-400">📁 경력 요약</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center text-400">경력 요약</h2>
         <div className="space-y-6">
           {careers.map((job, i) => (
             <div

@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section className="py-20 px-4 bg-[#0d1126] text-white">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8 text-pink-400">👋 자기소개</h2>
+        <h2 className="text-3xl font-bold mb-8 text-400">자기소개</h2>
 
         <p className="text-lg leading-relaxed text-gray-300">
           안녕하세요. <span className="text-lime-400 font-semibold">방동혁</span>입니다. <br />

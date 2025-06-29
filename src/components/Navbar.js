@@ -1,6 +1,6 @@
 function Navbar({ onScrollTo }) {
   return (
-    <nav className="bg-black z-50 flex justify-center space-x-6 py-4">
+    <nav className="sticky top-0 left-0 bg-black z-50 flex justify-center space-x-6 py-4">
       <button onClick={onScrollTo.main}>Home</button>
       <button onClick={onScrollTo.skills}>Skills</button>
       <button onClick={onScrollTo.career}>Career</button>

@@ -80,7 +80,7 @@ export default function Projects() {
   return (
     <section className="py-16 px-4 bg-[#0d1126] text-white">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center text-cyan-400">📌 프로젝트 경험</h2>
+        <h2 className="text-3xl font-bold mb-10 text-center text-400">프로젝트 경험</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <div

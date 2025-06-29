@@ -21,7 +21,7 @@ function Home() {
   };
 
   return (
-    <div>
+    <div className='bg-[#0d1126]'>
       <section ref={mainRef}><Main /></section>
       <Navbar
         onScrollTo={{
@@ -38,6 +38,7 @@ function Home() {
       <section ref={projectsRef}><Projects /></section>
       <section ref={aboutRef}><About /></section>
       <section ref={feedbackRef}><Feedbacks /></section>
+    
     </div>
   );
 }

@@ -4,7 +4,7 @@ export default function AdminFeedbacks() {
   const [feedbacks, setFeedbacks] = useState([]);
 
     useEffect(() => {
-    fetch('/api/feedbacks/admin/all')  // ✅ 경로 수정!
+    fetch(`${process.env.REACT_APP_API_URL}/api/feedbacks/admin/all`)  // ✅ 경로 수정!
         .then((res) => res.json())
         .then((data) => setFeedbacks(data))
         .catch((err) => console.error('불러오기 실패:', err));
@@ -12,7 +12,7 @@ export default function AdminFeedbacks() {
 
   const toggleApproval = async (id, currentStatus) => {
     try {
-      const res = await fetch(`/api/feedbacks/${id}/approve`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/feedbacks/${id}/approve`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ approved: !currentStatus })

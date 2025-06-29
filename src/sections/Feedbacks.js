@@ -4,7 +4,7 @@ export default function Feedbacks() {
   const [feedbacks, setFeedbacks] = useState([]);
 
     useEffect(() => {
-    fetch('/api/feedbacks')
+    fetch(`${process.env.REACT_APP_API_URL}/api/feedbacks`)
       .then((res) => res.json())
       .then((data) => setFeedbacks(data))
       .catch((err) => console.error('Error fetching feedbacks:', err));

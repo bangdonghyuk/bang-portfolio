@@ -12,7 +12,7 @@ export default function FeedbackForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-          const res = await fetch('/api/feedbacks', {
+          const res = await fetch(`${process.env.REACT_APP_API_URL}/api/feedbacks`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

@@ -3,12 +3,21 @@ import { useEffect, useState } from 'react';
 export default function Feedbacks() {
   const [feedbacks, setFeedbacks] = useState([]);
 
-    useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/feedbacks`)
-      .then((res) => res.json())
-      .then((data) => setFeedbacks(data))
-      .catch((err) => console.error('Error fetching feedbacks:', err));
-  }, []);
+useEffect(() => {
+  fetch(`${process.env.REACT_APP_API_URL}/api/feedbacks`)
+    .then((res) => {
+      if (!res.ok) {
+        // 서버가 오류 메시지를 보낸 경우 (text 응답)
+        return res.text().then((text) => {
+          throw new Error(`서버 오류: ${text}`);
+        });
+      }
+      return res.json();
+    })
+    .then((data) => setFeedbacks(data))
+    .catch((err) => console.error('Error fetching feedbacks:', err.message));
+}, []);
+
 
   return (
     <section className="py-16 px-4 bg-[#0d1126] text-white">

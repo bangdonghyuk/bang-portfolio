@@ -37,7 +37,7 @@ function Home() {
       <section ref={careerRef}><Career /></section>
       <section ref={projectsRef}><Projects /></section>
       <section ref={aboutRef}><About /></section>
-      <section ref={feedbackRef}><Feedbacks /></section>
+      {/* <section ref={feedbackRef}><Feedbacks /></section> */}
     
     </div>
   );

@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react';
 export default function AdminFeedbacks() {
   const [feedbacks, setFeedbacks] = useState([]);
 
-    useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/feedbacks/admin/all`)  // ✅ 경로 수정!
-        .then((res) => res.json())
-        .then((data) => setFeedbacks(data))
-        .catch((err) => console.error('불러오기 실패:', err));
-    }, []);
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_API_URL}/api/feedbacks/admin/all`)
+      .then((res) => res.json())
+      .then((data) => setFeedbacks(data))
+      .catch((err) => console.error('불러오기 실패:', err));
+  }, []);
 
   const toggleApproval = async (id, currentStatus) => {
     try {
@@ -39,6 +39,9 @@ export default function AdminFeedbacks() {
         <div key={fb._id} className="border rounded-lg p-4 mb-4 shadow-sm">
           <p><strong>To:</strong> {fb.to}</p>
           <p><strong>From:</strong> {fb.from}</p>
+          {fb.company && <p><strong>회사:</strong> {fb.company}</p>}
+          {fb.role && <p><strong>직군:</strong> {fb.role}</p>}
+          {fb.position && <p><strong>직책:</strong> {fb.position}</p>}
           <p><strong>Message:</strong> {fb.message}</p>
           <p><strong>승인 상태:</strong> {fb.approved ? '✅ 승인됨' : '❌ 미승인'}</p>
           <button

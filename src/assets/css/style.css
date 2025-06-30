@@ -7,10 +7,10 @@
     font-style: normal;
 }
 
-
 body{
     font-family: 'Pretendard-Regular';
     color: #fff;
+    background-color: #0d1126;
 }
 
 input,textarea{

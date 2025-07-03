@@ -10,7 +10,7 @@ export default function About() {
           현재는 프론트엔드 개발자로 성장해나가고 있습니다.
         </p>
 
-        <div className="mt-10 text-left space-y-6 text-gray-300 text-base leading-relaxed">
+        <div className="mt-10 text-center space-y-6 text-gray-300 text-base leading-relaxed">
           <p>
             React 기반 UI 컴포넌트 설계 및 퍼블리싱, API 연동 개발까지 경험하며<br />
             디자인과 사용자 경험을 함께 고려하는 프론트엔드 개발을 지향합니다.

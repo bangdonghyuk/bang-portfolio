@@ -60,13 +60,13 @@ export default function FeedbackForm() {
   }
 
   return (
-    <div className="p-4 max-w-xl mx-auto">
-      <h2 className="text-xl font-bold mb-4">{to}님의 귀한 피드백에 감사드립니다.</h2>
+    <div className="p-4 max-w-xl mx-auto min-h-screen flex items-center">
       <form onSubmit={handleSubmit}>
+        <h2 className="text-xl font-bold mb-4">{to}님의 귀한 피드백에 감사드립니다.</h2>
         <input
           name="name"
           placeholder="이름"
-          className="mb-2 p-2 border w-full"
+          className="mb-2 p-2 w-full bg-[#374151] border border-gray-600 text-white placeholder-gray-400 rounded"
           value={form.name}
           onChange={handleChange}
           required
@@ -74,34 +74,34 @@ export default function FeedbackForm() {
         <input
           name="company"
           placeholder="회사"
-          className="mb-2 p-2 border w-full"
+          className="mb-2 p-2 w-full bg-[#374151] border border-gray-600 text-white placeholder-gray-400 rounded"
           value={form.company}
           onChange={handleChange}
         />
         <input
           name="role"
           placeholder="직군 (ex. 프론트엔드 개발자)"
-          className="mb-2 p-2 border w-full"
+          className="mb-2 p-2 w-full bg-[#374151] border border-gray-600 text-white placeholder-gray-400 rounded"
           value={form.role}
           onChange={handleChange}
         />
         <input
           name="position"
           placeholder="직책 (ex. 사원, 팀장)"
-          className="mb-2 p-2 border w-full"
+          className="mb-2 p-2 w-full bg-[#374151] border border-gray-600 text-white placeholder-gray-400 rounded"
           value={form.position}
           onChange={handleChange}
         />
         <textarea
           name="message"
           placeholder="피드백을 입력해주세요"
-          className="mb-2 p-2 border w-full"
+          className="mb-2 p-2 w-full bg-[#374151] border border-gray-600 text-white placeholder-gray-400 rounded"
           rows={5}
           value={form.message}
           onChange={handleChange}
           required
         />
-        <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded">
+        <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded w-full">
           제출
         </button>
       </form>

@@ -3,10 +3,11 @@ export default function Skills() {
     '/images/icon_html.svg',
     '/images/icon_css.svg',
     '/images/icon_jquery.svg',
+    '/images/img_Javascript.webp',
     '/images/img_Sass.webp',
     '/images/img_tailwind-css.webp',
 
-    '/images/img_Javascript.webp',
+
     '/images/icon_react.png',
     '/images/img_Next.webp',
     '/images/img_zustand.webp',

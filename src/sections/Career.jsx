@@ -58,9 +58,9 @@ export default function Career() {
         </div>
 
         <div className="flex gap-4 items-center md:max-w-[768px] mx-auto mt-12 mb-8">
-          <div className="w-full h-[1px] bg-gradient-to-l from-foreground/15"></div>
+          <div className="w-full h-[1px] bg-gradient-to-l from-white/20"></div>
           <p className="flex-shrink-0 text-xs md:text-sm text-foreground/50">업무 경험</p>
-          <div className="w-full h-[1px] bg-gradient-to-r from-foreground/15"></div>
+          <div className="w-full h-[1px] bg-gradient-to-r from-white/20"></div>
         </div>
 
 

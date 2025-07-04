@@ -116,9 +116,7 @@ export default function Projects() {
             description: "React 기반 금융인증서비스 구축 프로젝트로, UI 퍼블리싱을 100% 전담했습니다.",
             period: "2023.07 ~ 2023.12",
             role: "React 기반 퍼블리싱 및 UI 컴포넌트 제작",
-            tools: [
-                '/images/icon_react.png', '/images/ts.png', '/images/img_Sass.webp', '/images/pr.png'
-            ],
+            tools: ["/images/icon_html.svg", "/images/icon_css.svg", "/images/icon_react.png", "/images/img_figma.webp", '/images/img_github.webp',],
             icon: '/images/blue.png',
             responsibilities: ["React 기반 UI 컴포넌트 개발 및 퍼블리싱 100% 담당", "SCSS 기반 스타일 설계 및 반응형 UI 퍼블리싱 구현", "컴포넌트 단위의 재사용 가능한 UI 구조 설계", "Git 브랜치 전략(feature/...) 기반 작업 분기 및 통합", "디자이너와 협업하여 디자인 시안 기반 퍼블리싱 최적화"]
         }, {

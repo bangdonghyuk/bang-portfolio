@@ -15,8 +15,8 @@ export default function Main() {
         <span className="text-sky-500">방동혁</span>입니다.
       </h1>
       <p className="text-sm md:text-base mt-6 text-gray-400 leading-relaxed">
-       퍼블리셔로 시작해 다양한 프로젝트를 경험하며<br/>
-       프론트엔드 개발자로 성장해나가고 있습니다.
+        웹디자인과 퍼블리싱으로 커리어를 시작해<br/>
+        프로젝트를 거치며 프론트엔드 개발자로 성장하고 있습니다.
       </p>
     </div>
   );

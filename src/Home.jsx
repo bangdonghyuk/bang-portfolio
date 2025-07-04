@@ -2,6 +2,7 @@ import { useRef } from 'react';
 
 import Navbar from './components/Navbar';
 import Main from './sections/Main';
+import Power from './sections/Power';
 import Skills from './sections/Skills';
 import Career from './sections/Career';
 import Projects from './sections/Projects';
@@ -21,7 +22,7 @@ function Home() {
   };
 
   return (
-    <div className='bg-[#0d1126]'>
+    <div className='bg-[#0f182a]'>
       <section ref={mainRef}><Main /></section>
       <Navbar
         onScrollTo={{
@@ -33,11 +34,12 @@ function Home() {
           feedbacks: () => scrollTo(feedbackRef),
         }}
       />
-      <section ref={skillsRef}><Skills /></section>
-      <section ref={careerRef}><Career /></section>
-      <section ref={projectsRef}><Projects /></section>
       <section ref={aboutRef}><About /></section>
       <section ref={feedbackRef}><Feedbacks /></section>
+      <section ref={skillsRef}><Power /></section>
+      <section><Skills /></section>
+      <section ref={careerRef}><Career /></section>
+      <section ref={projectsRef}><Projects /></section>
     
     </div>
   );

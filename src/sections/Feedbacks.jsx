@@ -20,9 +20,14 @@ useEffect(() => {
 
 
   return (
-    <section className="py-16 px-4 bg-[#0d1126] text-white">
+    <section className="py-16 px-4 text-white">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center text-400">함께 일한 사람들의 평가</h2>
+
+        <div className="text-center mb-10">
+            <h3 className="text-sky-500 font-semibold mb-2">팀원 리뷰</h3>
+            <h2 className="text-2xl md:text-3xl font-bold">함께 일한 사람들의 평가</h2>
+          </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {feedbacks.map((f, i) => (
             <div key={i} className="bg-gray-800 rounded-xl p-6 shadow hover:shadow-lg transition">

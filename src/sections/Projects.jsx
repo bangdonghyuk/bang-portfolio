@@ -78,16 +78,19 @@ export default function Projects() {
   ];
 
   return (
-    <section className="py-16 px-4 bg-[#0d1126] text-white">
+    <section className="py-16 px-4 text-white">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-center text-400">프로젝트 경험</h2>
+        <div className="text-center mb-10">
+            <h3 className="text-sky-500 font-semibold mb-2">프로젝트 상세</h3>
+            <h2 className="text-2xl md:text-3xl font-bold">주요 프로젝트의 세부 사항을 확인해보세요</h2>
+          </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((p, i) => (
             <div
               key={i}
               className="bg-gray-800 rounded-xl p-5 shadow hover:shadow-lg transition"
             >
-              <h3 className="text-lg font-semibold text-emerald-300">{p.name}</h3>
+              <h3 className="text-lg font-semibold">{p.name}</h3>
               <p className="text-sm text-gray-400 mt-1">{p.period}</p>
               <p className="text-sm mt-2">{p.role}</p>
             </div>

@@ -1,3 +1,5 @@
+import {motion, AnimatePresence} from "framer-motion";
+
 export default function Projects() {
     const projects = [
         {
@@ -116,7 +118,9 @@ export default function Projects() {
             description: "React 기반 금융인증서비스 구축 프로젝트로, UI 퍼블리싱을 100% 전담했습니다.",
             period: "2023.07 ~ 2023.12",
             role: "React 기반 퍼블리싱 및 UI 컴포넌트 제작",
-            tools: ["/images/icon_html.svg", "/images/icon_css.svg", "/images/icon_react.png", "/images/img_figma.webp", '/images/img_github.webp',],
+            tools: [
+                "/images/icon_html.svg", "/images/icon_css.svg", "/images/icon_react.png", "/images/img_figma.webp", '/images/img_github.webp'
+            ],
             icon: '/images/blue.png',
             responsibilities: ["React 기반 UI 컴포넌트 개발 및 퍼블리싱 100% 담당", "SCSS 기반 스타일 설계 및 반응형 UI 퍼블리싱 구현", "컴포넌트 단위의 재사용 가능한 UI 구조 설계", "Git 브랜치 전략(feature/...) 기반 작업 분기 및 통합", "디자이너와 협업하여 디자인 시안 기반 퍼블리싱 최적화"]
         }, {
@@ -125,10 +129,7 @@ export default function Projects() {
             period: "2024.03 ~ 2024.09",
             role: "JSP 기반 퍼블리싱 100% + 게시판 CRUD 개발 참여",
             tools: [
-                '/images/icon_html.svg',
-                '/images/icon_css.svg',
-                '/images/icon_jquery.svg',
-                '/images/img_Javascript.webp',
+                '/images/icon_html.svg', '/images/icon_css.svg', '/images/icon_jquery.svg', '/images/img_Javascript.webp'
             ],
             icon: '/images/blue.png',
             responsibilities: ["JSP + Java 백엔드 환경 기반 퍼블리싱 100% 담당", "게시판 및 상세 페이지 CRUD 기능 개발 참여 (Java 기반)", "BEM 방식의 퍼블리싱 방법론으로 구조적 설계 적용", "라이브러리 커스터마이징"]
@@ -138,10 +139,7 @@ export default function Projects() {
             period: "2024.10 ~ 2024.12",
             role: "UI 퍼블리싱 기여도 100%",
             tools: [
-                '/images/icon_html.svg',
-                '/images/icon_css.svg',
-                '/images/icon_jquery.svg',
-                '/images/img_Javascript.webp',
+                '/images/icon_html.svg', '/images/icon_css.svg', '/images/icon_jquery.svg', '/images/img_Javascript.webp'
             ],
             icon: '/images/blue.png',
             url: "https://www.samsunginnovationmuseum.com/", // 실제 URL 삽입
@@ -153,7 +151,7 @@ export default function Projects() {
             responsibilities: [
                 "React 기반 UI 화면 퍼블리싱 및 구조 설계", "공통 컴포넌트 제작 및 props 단위 유연성 확보", "Chart 라이브러리 초기 세팅 및 데이터 연동 구조 구현", "디자인 시안 기반 퍼블리싱 및 반응형 대응"
             ],
-            tools: ["/images/icon_html.svg", "/images/icon_css.svg", "/images/icon_react.png", "/images/img_figma.webp", '/images/img_github.webp',]
+            tools: ["/images/icon_html.svg", "/images/icon_css.svg", "/images/icon_react.png", "/images/img_figma.webp", '/images/img_github.webp']
         }, {
             name: "현대트렌시스 R&D 통합관리",
             period: "2025.04 ~ 진행중",
@@ -173,59 +171,77 @@ export default function Projects() {
     ];
 
     return (
-        <section className="py-20 px-4 bg-background text-white">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-12">
-                프로젝트 상세
-            </h2>
+        <div className="py-20 px-4 bg-background text-white">
+            <motion.div
+                initial={{
+                opacity: 0,
+                y: 40
+            }}
+                whileInView={{
+                opacity: 1,
+                y: 0
+            }}
+                transition={{
+                duration: 0.5
+            }}
+                viewport={{
+                once: true,
+                amount: 0.2
+            }}>
+                <div className="text-center mb-10">
+                    <h3 className="text-sky-500 font-semibold mb-2">프로젝트 상세</h3>
+                    <h2 className="text-2xl font-medium">다양한 프로젝트를 경험하였습니다.</h2>
+                </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-                {projects.map((project, index) => (
-                    <div
-                        key={index}
-                        className="border border-solid border-white/20  p-6 flex flex-col gap-4 rounded-xl">
-                        {/* 프로젝트 제목 + 설명 */}
-                        <div>
-                            <h3 className="text-xl font-bold text-white">{project.name}</h3>
-                            <p className="text-sm text-gray-400 mt-1">{project.description}</p>
-                        </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                    {projects.map((project, index) => (
+                        <div
+                            key={index}
+                            className="border border-solid border-white/20  p-6 flex flex-col gap-4 rounded-xl">
+                            {/* 프로젝트 제목 + 설명 */}
+                            <div>
+                                <h3 className="text-xl font-bold text-white">{project.name}</h3>
+                                <p className="text-sm text-gray-400 mt-2">{project.description}</p>
+                            </div>
 
-                        {/* 기여도/역할 */}
-                        <div>
-                            <h4 className="text-sm font-medium text-sky-500 mb-1">담당 역할</h4>
-                            <p className="text-sm text-gray-300">{project.role}</p>
-                        </div>
+                            {/* 기여도/역할 */}
+                            <div>
+                                <h4 className="text-sm font-medium text-sky-500 mb-1">담당 역할</h4>
+                                <p className="text-sm text-gray-300">{project.role}</p>
+                            </div>
 
-                        {/* 작업 내용 리스트 */}
-                        <div>
-                            <h4 className="text-sm font-medium text-sky-500 mb-1">주요 작업</h4>
-                            <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                            {/* 작업 내용 리스트 */}
+                            <div>
+                                <h4 className="text-sm font-medium text-sky-500 mb-1">주요 작업</h4>
+                                <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+                                    {project
+                                        .responsibilities
+                                        .map((item, idx) => (
+                                            <li key={idx}>{item}</li>
+                                        ))}
+                                </ul>
+                            </div>
+
+                            {/* 사용 툴 아이콘 */}
+                            <div className="flex flex-wrap gap-2 items-center">
                                 {project
-                                    .responsibilities
-                                    .map((item, idx) => (
-                                        <li key={idx}>{item}</li>
-                                    ))}
-                            </ul>
-                        </div>
+                                    .tools
+                                    .map((tool, i) => (<img key={i} src={tool} alt={`tool-${i}`} className="w-6 h-6"/>))}
+                            </div>
 
-                        {/* 사용 툴 아이콘 */}
-                        <div className="flex flex-wrap gap-2 items-center">
-                            {project
-                                .tools
-                                .map((tool, i) => (<img key={i} src={tool} alt={`tool-${i}`} className="w-6 h-6"/>))}
+                            {project.url && (
+                                <a
+                                    href={project.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm hover:underline">
+                                    사이트 바로가기
+                                </a>
+                            )}
                         </div>
-
-                        {project.url && (
-                            <a
-                                href={project.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-sm hover:underline">
-                                사이트 바로가기
-                            </a>
-                        )}
-                    </div>
-                ))}
-            </div>
-        </section>
+                    ))}
+                </div>
+            </motion.div>
+        </div>
     );
 }

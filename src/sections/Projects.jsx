@@ -186,7 +186,7 @@ export default function Projects() {
             }}
                 viewport={{
                 once: true,
-                amount: 0.2
+                amount: 0
             }}>
                 <div className="text-center mb-10">
                     <h3 className="text-sky-500 font-semibold mb-2">프로젝트 상세</h3>
